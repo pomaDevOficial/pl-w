@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.routerReaciones = void 0;
+const express_1 = require("express");
+const reaccion_controllers_1 = require("../controllers/reaccion.controllers");
+const routerReaciones = (0, express_1.Router)();
+exports.routerReaciones = routerReaciones;
+routerReaciones.get('/:id', reaccion_controllers_1.getReacciones);
+routerReaciones.post('/', reaccion_controllers_1.postReacciones);
+routerReaciones.put('/:id', reaccion_controllers_1.putReaccion);
